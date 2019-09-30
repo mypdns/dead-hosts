@@ -1,4 +1,4 @@
-#dist: bionic
+dist: bionic
 addons:
     apt:
         packages:
@@ -32,8 +32,8 @@ matrix:
 
 sudo: required
 
-#before_install:
-#  - sudo apt-get install dos2unix -yqq --no-install-recommends
+before_install:
+  - sudo apt-get install dos2unix -yqq --no-install-recommends
 
 install:
   - pip3 install --upgrade pip
