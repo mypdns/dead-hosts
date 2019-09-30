@@ -1,0 +1,86 @@
+# This hosts file is brought to you by Mitchell Krog
+# Copyright: https://github.com/mitchellkrogza
+# Source: https://github.com/spirillen/Dead-Domains
+
+# You are free to copy and distribute this file for non-commercial uses,
+# as long the original URL and attribution is included. 
+
+# Please forward any additions, corrections or comments by logging an issue at
+# https://github.com/spirillen/Dead-Domains/issues
+
+# This list of hosts is compiled from server logs on my own servers
+# and forms the basis of the bad referrers domain lists for
+# The Nginx Ultimate Bad Bot Blocker at: 
+# https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker
+# and the Apache Ultimate Bad Bot Blocker at:
+# https://github.com/mitchellkrogza/apache-ultimate-bad-bot-blocker
+
+##### Version Information #
+###################################################
+### Version: V1.2019.09.42
+##### Version Information ##
+
+# Use this file to prevent your computer or server from connecting to selected
+# internet hosts. This is an easy and effective way to protect you from 
+# many types of spyware, adware, malware, click-jacking and porn sites and reduces 
+# bandwidth use. 
+
+# The file should be named "hosts" NOT "hosts.txt"
+
+# For Linux based Operating systems place this file at "/etc/hosts"
+
+# For Windows based systems this is placed either at
+# C:\windows\system32\drivers\etc\hosts
+# or C:\Windows\System32\drivers\etc\hosts
+
+127.0.0.1 localhost
+::1 localhost #[IPv6]
+
+# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###
+0.0.0.0 360.mediav.com
+0.0.0.0 7hoqd16sufw9f9h3swlkdt6lqdn3ud.ext-twitch.tv
+0.0.0.0 ads.aws.viber.com
+0.0.0.0 ads.digitalcaramel.com
+0.0.0.0 ads-d.viber.com
+0.0.0.0 ads-game-187f4.firebaseapp.com
+0.0.0.0 ads.lrb.co.uk
+0.0.0.0 ads.qz.com
+0.0.0.0 ads.viber.com
+0.0.0.0 api1.accengage.com
+0.0.0.0 api2.accengage.com
+0.0.0.0 api3.accengage.com
+0.0.0.0 api.deep.bi
+0.0.0.0 apigw.scmp.com
+0.0.0.0 api.mixpanel.com
+0.0.0.0 apiproxy3.accengage.com
+0.0.0.0 b2bapi.zee5.com
+0.0.0.0 buf-lemonde-fr-cddc.at-o.net
+0.0.0.0 cdn.braun634.com
+0.0.0.0 cdn.concert.io
+0.0.0.0 cdn.discoveryad.castoola.tv
+0.0.0.0 cdn.gotraffic.net
+0.0.0.0 cdn.keywee.co
+0.0.0.0 cdn.moji.com
+0.0.0.0 chrome.google.com
+0.0.0.0 cm.mediav.com
+0.0.0.0 cmp.evolok.net
+0.0.0.0 cs22.wpc.v0cdn.net
+0.0.0.0 cs593.adn.mucdn.net
+0.0.0.0 d2zjlj1vewrxcj.cloudfront.net
+0.0.0.0 data.flw.li
+0.0.0.0 discoveryad.castoola.tv
+0.0.0.0 imasdk.googleapis.com
+0.0.0.0 js.high-minded.net
+0.0.0.0 llnk.eu
+0.0.0.0 max-l.mediav.com
+0.0.0.0 medya.ilan.gov.tr
+0.0.0.0 munchkin.marketo.net
+0.0.0.0 post.7p.com
+0.0.0.0 sb.voicefive.com
+0.0.0.0 sedo.cachefly.net
+0.0.0.0 show-g.mediav.com
+0.0.0.0 show.g.mediav.com
+0.0.0.0 vrl.m.conviva.com
+0.0.0.0 www3.l.google.com
+0.0.0.0 zee.cws.conviva.com
+# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###
