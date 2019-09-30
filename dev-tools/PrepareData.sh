@@ -34,7 +34,6 @@ PrepareLists () {
 
     wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/domains.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/wildcard.list' >> ${input1}
-    #wget -qO- 'https://gitlab.com/spirillen/world-dumbest-ultimate-hosts-blacklist/raw/master/UltimateWorldBiggestDumbestHosts.hosts' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/dg-malicious/domain.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/fademind_blocklists-facebook/domain.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/phishing_army_blocklist_extended/domain.list' >> ${input1}
@@ -84,7 +83,7 @@ PrepareLists () {
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/fademind_antipopads/domain.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/suspiciousdomains_high/domain.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/blocklist_spam/domain.list' >> ${input1}
-    wget -qO- 'https://gitlab.com/spirillen/world-dumbest-ultimate-hosts-blacklist/raw/master/UltimateWorldBiggestDumbestHosts.hosts' >> ${input1}
+    #wget -qO- 'https://gitlab.com/spirillen/world-dumbest-ultimate-hosts-blacklist/raw/master/UltimateWorldBiggestDumbestHosts.hosts' >> ${input1}
 
     sort -u -f ${input1} -o ${input1}
     dos2unix ${input1}
