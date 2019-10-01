@@ -52249,6 +52249,21 @@
         "expiration_date": "25-sep-2020",
         "state": "future"
     },
+    "zinturax.com": {
+        "epoch": 1572134400,
+        "expiration_date": "27-oct-2019",
+        "state": "future"
+    },
+    "zirobata.com": {
+        "epoch": 1588982400,
+        "expiration_date": "09-may-2020",
+        "state": "future"
+    },
+    "zjk24.com": {
+        "epoch": 1583193600,
+        "expiration_date": "03-mar-2020",
+        "state": "future"
+    },
     "zkvdsdsftimj.bid": {
         "epoch": "1534284000",
         "expiration_date": "15-aug-2018",
@@ -52262,6 +52277,11 @@
     "zlektorem.pl": {
         "epoch": "1560636000",
         "expiration_date": "16-jun-2019",
+        "state": "future"
+    },
+    "zmctrack.net": {
+        "epoch": 1583366400,
+        "expiration_date": "05-mar-2020",
         "state": "future"
     },
     "znakomstva-piter78.ru": {
@@ -52288,6 +52308,16 @@
         "epoch": "1534543200",
         "expiration_date": "18-aug-2018",
         "state": "past"
+    },
+    "zoacaups.net": {
+        "epoch": 1581379200,
+        "expiration_date": "11-feb-2020",
+        "state": "future"
+    },
+    "zoagremo.net": {
+        "epoch": 1578614400,
+        "expiration_date": "10-jan-2020",
+        "state": "future"
     },
     "zob-top-xlinks.com": {
         "epoch": "1568584800",
@@ -52342,6 +52372,16 @@
     "zone3x.net": {
         "epoch": "1570744800",
         "expiration_date": "11-oct-2019",
+        "state": "future"
+    },
+    "zonolali.com": {
+        "epoch": 1598745600,
+        "expiration_date": "30-aug-2020",
+        "state": "future"
+    },
+    "zononi.com": {
+        "epoch": 1571529600,
+        "expiration_date": "20-oct-2019",
         "state": "future"
     },
     "zoo-x.net": {
@@ -52414,6 +52454,11 @@
         "expiration_date": "22-jul-2019",
         "state": "future"
     },
+    "zoonoapt.net": {
+        "epoch": 1582848000,
+        "expiration_date": "28-feb-2020",
+        "state": "future"
+    },
     "zoosex-top.com": {
         "epoch": "1580940000",
         "expiration_date": "06-feb-2020",
@@ -52434,6 +52479,11 @@
         "expiration_date": "12-dec-2019",
         "state": "future"
     },
+    "zorbikala.com": {
+        "epoch": 1573257600,
+        "expiration_date": "09-nov-2019",
+        "state": "future"
+    },
     "zorkiy.net": {
         "epoch": "1556488800",
         "expiration_date": "29-apr-2019",
@@ -52442,6 +52492,21 @@
     "zorras.cc": {
         "epoch": "1583704800",
         "expiration_date": "09-mar-2020",
+        "state": "future"
+    },
+    "zortinah.com": {
+        "epoch": 1570579200,
+        "expiration_date": "09-oct-2019",
+        "state": "future"
+    },
+    "zostofou.link": {
+        "epoch": 1603670400,
+        "expiration_date": "26-oct-2020",
+        "state": "future"
+    },
+    "zoteromedia.com": {
+        "epoch": 1597968000,
+        "expiration_date": "21-aug-2020",
         "state": "future"
     },
     "zqal.xyz": {
@@ -52457,6 +52522,26 @@
     "zssdi.it": {
         "epoch": "1573855200",
         "expiration_date": "16-nov-2019",
+        "state": "future"
+    },
+    "zugnogne.com": {
+        "epoch": 1589328000,
+        "expiration_date": "13-may-2020",
+        "state": "future"
+    },
+    "zukxd6fkxqn.com": {
+        "epoch": 1596326400,
+        "expiration_date": "02-aug-2020",
+        "state": "future"
+    },
+    "zusrd.cn": {
+        "epoch": 1595721600,
+        "expiration_date": "26-jul-2020",
+        "state": "future"
+    },
+    "zuzodoad.com": {
+        "epoch": 1586217600,
+        "expiration_date": "07-apr-2020",
         "state": "future"
     },
     "zvero.org": {
@@ -52484,9 +52569,24 @@
         "expiration_date": "27-apr-2020",
         "state": "future"
     },
+    "zxwiejfbyr.com": {
+        "epoch": 1599436800,
+        "expiration_date": "07-sep-2020",
+        "state": "future"
+    },
     "zybezradio.com": {
         "epoch": "1570831200",
         "expiration_date": "12-oct-2019",
+        "state": "future"
+    },
+    "zybxchina.com": {
+        "epoch": 1575331200,
+        "expiration_date": "03-dec-2019",
+        "state": "future"
+    },
+    "zymro.com": {
+        "epoch": 1590710400,
+        "expiration_date": "29-may-2020",
         "state": "future"
     },
     "zytpirwai.net": {
