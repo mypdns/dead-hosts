@@ -1,2 +1,2 @@
-PyFunceble>=1.8.0
-
+PyFunceble-dev==2.53.6
+ultimate-hosts-blacklist-whitelist
