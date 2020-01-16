@@ -1,9 +1,6 @@
 # Dead Domain Checker
 
-<img src="https://github.com/spirillen/Dead-Domains/blob/master/.assets/spacer.jpg"/>[![Build Status](https://travis-ci.org/spirillen/Dead-Domains.svg?branch=master)](https://travis-ci.org/spirillen/Dead-Domains) [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/spirillen/Dead-Domains/blob/master/LICENSE.md) [![GitHub Stats](https://img.shields.io/badge/github-stats-ff5500.svg)](http://githubstats.com/spirillen/Dead-Domains)
-
-_______________
-[![VERSION](https://img.shields.io/badge/VERSION%20-%20V1.2019.09.42-blue.svg)](https://github.com/spirillen/Dead-Domains/commits/master)
+<img src="https://github.com/spirillen/Dead-Domains/blob/master/.assets/spacer.jpg"/>[![Build Status](https://travis-ci.org/spirillen/Dead-Domains.svg?branch=master)](https://travis-ci.org/spirillen/Dead-Domains) [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/spirillen/Dead-Domains/blob/master/LICENSE.md) [![GitHub Stats](https://img.shields.io/badge/github-stats-ff5500.svg)](http://githubstats.com/spirillen/Dead-Domains) [![VERSION](https://img.shields.io/badge/VERSION%20-%20V1.2019.09.42-blue.svg)](https://github.com/spirillen/Dead-Domains/commits/master)
 
 ************************************************
 
