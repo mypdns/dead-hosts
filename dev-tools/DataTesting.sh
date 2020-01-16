@@ -14,8 +14,7 @@
 # Setting date variables
 # **********************
 
-yeartag=$(date +%Y)
-monthtag=$(date +%m)
+tag=$(date '+%F %X %Z %z')
 
 # ******************
 # Set our Input File
@@ -32,8 +31,7 @@ pyfuncebleProductionConfigurationFileLocation=${TRAVIS_BUILD_DIR}/dev-tools/.PyF
 
 RunFunceble () {
 
-    yeartag=$(date +%Y)
-    monthtag=$(date +%m)
+    tag=$(date '+%F %X %Z %z')
     ulimit -u
     cd ${TRAVIS_BUILD_DIR}/dev-tools
 
@@ -45,8 +43,13 @@ RunFunceble () {
         rm "${pyfuncebleProductionConfigurationFileLocation}"
     fi
 
-    PyFunceble --travis -db -ex --dns 95.216.209.53 116.203.32.67 --cmd-before-end "bash ${TRAVIS_BUILD_DIR}/dev-tools/FinalCommit.sh" --plain --autosave-minutes 20 --commit-autosave-message "V1.${yeartag}.${monthtag}.${TRAVIS_BUILD_NUMBER} [PyFunceble]" --commit-results-message "V1.${yeartag}.${monthtag}.${TRAVIS_BUILD_NUMBER}" -f ${input}
-
+    PyFunceble --ci -q -ex --plain --idna -db -h --http --database-type mariadb -m -p 4 \
+        --cmd-before-end "bash ${TRAVIS_BUILD_DIR}/dev-tools/FinalCommit.sh" \
+        --cmd "cat ${TRAVIS_BUILD_DIR}/dev-tools/output/domains/INACTIVE/list >> ${TRAVIS_BUILD_DIR}/PULL_REQUESTS/inactive.txt" \
+        --autosave-minutes 20 --ci-branch master --ci-distribution-branch master \
+        --commit-autosave-message "V1.${tag}.${TRAVIS_BUILD_NUMBER} [Auto Saved]" \
+        --commit-results-message "V1.${tag}.${TRAVIS_BUILD_NUMBER}" \
+        --dns 127.0.0.1 -f ${input}
 }
 
 RunFunceble
