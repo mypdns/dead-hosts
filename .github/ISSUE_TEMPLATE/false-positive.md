@@ -3,7 +3,7 @@ name: False Positive
 about: Reporting of any false positives or domains that need to be whitelisted
 title: "[FALSE-POSITIVE] "
 labels: false positive
-assignees: mitchellkrogza, funilrys
+assignees: spirillen, AnonymousPoster, mypdns
 
 ---
 
