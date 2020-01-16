@@ -36,7 +36,7 @@
 --
 --     MIT License
 --
---     Copyright (c) 2017, 2018, 2019 Nissar Chababy
+--     Copyright (c) 2017, 2018, 2019, 2020 Nissar Chababy
 --
 --     Permission is hereby granted, free of charge, to any person obtaining a copy
 --     of this software and associated documentation files (the "Software"), to deal
@@ -186,7 +186,7 @@ DELIMITER ;
 SET @tablename = "pyfunceble_tested";
 SET @columnname = "ipv6_syntax_validation";
 SET @columntype = "TINYINT(1) NULL";
-SET @columnafter = "ipv4_syntax_validation"
+SET @columnafter = "ipv4_syntax_validation";
 SET @preparedStatement = (SELECT IF(
     (
         SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS
@@ -214,7 +214,7 @@ DEALLOCATE PREPARE alterIfNotExists;
 SET @tablename = "pyfunceble_tested";
 SET @columnname = "ipv6_range_syntax_validation";
 SET @columntype = "TINYINT(1) NULL";
-SET @columnafter = "ipv6_syntax_validation"
+SET @columnafter = "ipv6_syntax_validation";
 SET @preparedStatement = (SELECT IF(
     (
         SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS
