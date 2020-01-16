@@ -21,7 +21,7 @@ env:
     - GIT_EMAIL: "44526987+spirillen@users.noreply.github.com"
     - TRAVIS_REPO_SLUG: mypdns/dead-hosts
     - GIT_BRANCH: master
-    - TZ    GMT
+    - TZ: Europe/Berlin
     - PYFUNCEBLE_CONFIG_DIR: ${TRAVIS_BUILD_DIR}/dev-tools/
     - PYFUNCEBLE_AUTO_CONFIGURATION: PyFunceble
 
