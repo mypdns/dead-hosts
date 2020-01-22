@@ -29,7 +29,7 @@ input1="${TRAVIS_BUILD_DIR}/PULL_REQUESTS/domains.txt"
 # Preparing to export directly from the Database hosting our 
 # rpz.mypdns.cloud zone records for testing
 
-mysql --batch --raw -u"${DB_USER}" -p"${DB_PASS}" -h"${DB_HOST}" -D="${DBASE}" -N \
+mysql --batch --raw -u"${DB_USER}" -p"${DB_PASS}" -h"${DB_HOST}" -D"${DBASE}" -N \
     -q -e'SELECT `name` FROM $DB_TABLE WHERE `domain_id`="$domain_id" AND name NOT REGEXP "^[*]\.";' \
     | sed 's/\.mypdns\.cloud//;/\.mypdns\.cloud/d;/^name$/d' > "${input1}"
 
