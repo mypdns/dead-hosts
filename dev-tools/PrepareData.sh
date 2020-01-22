@@ -12,7 +12,7 @@
 input1="${TRAVIS_BUILD_DIR}/PULL_REQUESTS/domains.txt"
 
 ls -lh ${input1}
-ls -lh /PULL_REQUESTS/domains.txt
+ls -lh ../PULL_REQUESTS/domains.txt
 # *********************************************
 # Get Travis CI Prepared for Committing to Repo
 # *********************************************
@@ -37,11 +37,11 @@ printf "\n\n\nImport rpz.mypdns.cloud from https://www.mypdns.org/\n\n\n"
 #    -q -e'SELECT `name` FROM "$RPZ_DB_TABLE" WHERE `domain_id`="$RPZ_DOMAIN_ID" AND name NOT REGEXP "^[*]\.";' \
 #    | sed 's/\.mypdns\.cloud//;/\.mypdns\.cloud/d;/^name$/d' > "${input1}"
 
-dig axfr @axfr.ipv4.mypdns.cloud -p 5353 rpz.mypdns.cloud > ../PULL_REQUESTS/domains.txt
+dig axfr @axfr.ipv4.mypdns.cloud -p 5353 rpz.mypdns.cloud >> ../PULL_REQUESTS/domains.txt
 
 printf "\n\n\nCount number of records exported\n\n\n"
 
-printf "\n\n\nThe test file contains: $(wc -l < \"${input1}\") records\n\n\n"
+printf "\n\n\nThe test file contains: $(wc -l < '${input1}') records\n\n\n"
 
 # **************************************************************************
 # Sort lists alphabetically and remove duplicates before cleaning Dead Hosts
