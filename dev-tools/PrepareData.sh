@@ -29,13 +29,13 @@ input1="${TRAVIS_BUILD_DIR}/PULL_REQUESTS/domains.txt"
 # Preparing to export directly from the Database hosting our 
 # rpz.mypdns.cloud zone records for testing
 
-mysql --batch --raw -u"${DB_USER}" -p"${DB_PASS}" -h"${DB_HOST}" -D $"{DBASE}" \
+mysql --batch --raw -u"${DB_USER}" -p"${DB_PASS}" -h"${DB_HOST}" -D$"{DBASE}" \
     -e'SELECT `name` FROM $DB_TABLE WHERE `domain_id`="$domain_id" AND name NOT REGEXP "^[*]\.";' \
     | sed 's/\.mypdns\.cloud//;/\.mypdns\.cloud/d;/^name$/d' > "${input1}"
 
 printf "\n\n\nCount number of records exported\n\n\n"
 
-printf "\n\n\nThe test file contains $(wc -l < \"${input1}\")\n\n\n"
+printf "\n\n\nThe test file contains: $(wc -l < \"${input1}\") records\n\n\n"
 
 # **************************************************************************
 # Sort lists alphabetically and remove duplicates before cleaning Dead Hosts
@@ -43,8 +43,8 @@ printf "\n\n\nThe test file contains $(wc -l < \"${input1}\")\n\n\n"
 
 PrepareLists () {
 
-    wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/domains.list' >> ${input1}
-    wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/wildcard.list' >> ${input1}
+    "wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/domains.list' >> ${input1}
+    "wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/wildcard.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/dg-malicious/domain.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/fademind_blocklists-facebook/domain.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/phishing_army_blocklist_extended/domain.list' >> ${input1}
