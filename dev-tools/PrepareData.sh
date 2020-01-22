@@ -43,8 +43,8 @@ printf "\n\n\nThe test file contains: $(wc -l < \"${input1}\") records\n\n\n"
 
 PrepareLists () {
 
-    "wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/domains.list' >> ${input1}
-    "wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/wildcard.list' >> ${input1}
+    #wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/domains.list' >> ${input1}
+    #wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/wildcard.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/dg-malicious/domain.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/fademind_blocklists-facebook/domain.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/phishing_army_blocklist_extended/domain.list' >> ${input1}
