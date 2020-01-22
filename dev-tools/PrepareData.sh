@@ -35,7 +35,15 @@ printf "\n\n\nImport rpz.mypdns.cloud from https://www.mypdns.org/\n\n\n"
 
 printf "\n\n\nThe test file contains: $(wc -l < ${input1}) records\n\n\n"
 
-mysql --batch --raw --host=$RPZ_DB_SERVER --user=$RPZ_DB_USER --password=$RPZ_DB_PASS --database=$RPZ_DB -N \
+echo "$RPZ_DB_SERVER"
+
+echo "$RPZ_DB"
+
+echo "$RPZ_DB_TABLE"
+
+echo "$RPZ_DOMAIN_ID"
+
+mysql --batch --raw --host="$RPZ_DB_SERVER" --user="$RPZ_DB_USER" --password="$RPZ_DB_PASS" --database="$RPZ_DB" -N \
     -q -e'SELECT `name` FROM $RPZ_DB_TABLE WHERE `domain_id`=$RPZ_DOMAIN_ID AND name NOT REGEXP "^[*]\.";' \
     | sed 's/\.mypdns\.cloud//;/\.mypdns\.cloud/d;/^name$/d' >> ${input1}
 
