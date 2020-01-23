@@ -28,9 +28,9 @@ input1="${TRAVIS_BUILD_DIR}/PULL_REQUESTS/domains.txt"
 
 printf "\n\n\nImport rpz.mypdns.cloud from https://www.mypdns.org/\n\n\n"
 
-#printf "\n\n\nThe test file contains: $(wc -l < ${input1}) records\n\n\n"
+printf "\n\n\nThe test file contains: $(wc -l < ${input1}) records\n\n\n"
 
-#mysql --batch --raw --host="$RPZ_DB_SERVER" --user="$RPZ_DB_USER" --password="$RPZ_DB_PASS" --database="$RPZ_DB" -N -q -e'SELECT `name` FROM $RPZ_DB_TABLE WHERE `domain_id`=$RPZ_DOMAIN_ID AND name NOT REGEXP "^[*]\.";' | sed 's/\.mypdns\.cloud//;/\.mypdns\.cloud/d;/^name$/d' >> ${input1}
+mysql --batch --raw --host="${RPZ_DB_SERVER2}" --user='${RPZ_DB_USER}' --password='{$RPZ_DB_PASS}' --database='${RPZ_DB}' -N -q -e "SELECT \`name\` FROM ${RPZ_DB_TABLE} WHERE \`domain_id\`=$RPZ_DOMAIN_ID AND name NOT REGEXP '^[*]\.'\;" | sed 's/\.mypdns\.cloud//;/\.mypdns\.cloud/d;/^name$/d' >> "${input1}"
 
 printf "\n\n\nThe test file contains: $(wc -l < ${input1}) records\n\n\n"
 
@@ -44,7 +44,6 @@ printf "\n\n\nThe test file contains: $(wc -l < ${input1}) records\n\n\n"
 
 
 PrepareLists () {
-    mysql --batch --raw --host="${RPZ_DB_SERVER2}" --user='${RPZ_DB_USER}' --password='{$RPZ_DB_PASS}' --database='${RPZ_DB}' -N -q -e "SELECT \`name\` FROM ${RPZ_DB_TABLE} WHERE \`domain_id\`=$RPZ_DOMAIN_ID AND name NOT REGEXP '^[*]\.'\;" | sed 's/\.mypdns\.cloud//;/\.mypdns\.cloud/d;/^name$/d' >> "${input1}"
     #wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/domains.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/wildcard.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/dg-malicious/domain.list' >> ${input1}
