@@ -42,9 +42,11 @@ printf "\n\n\nThe test file contains: $(wc -l < ${input1}) records\n\n\n"
 # Sort lists alphabetically and remove duplicates before cleaning Dead Hosts
 # **************************************************************************
 
+ping -c 1 ${RPZ_DB_SERVER}
+
 PrepareLists () {
-    mysql --batch --raw --host="$RPZ_DB_SERVER" --user="$RPZ_DB_USER" --password="$RPZ_DB_PASS" \
-        --database="$RPZ_DB" -N -q \
+    mysql --batch --raw --host="${RPZ_DB_SERVER}" --user="${RPZ_DB_USER}" --password="{$RPZ_DB_PASS}" \
+        --database="${RPZ_DB}" -N -q \
         -e'SELECT `name` FROM $RPZ_DB_TABLE WHERE `domain_id`=$RPZ_DOMAIN_ID AND name NOT REGEXP "^[*]\.";' \
         | sed 's/\.mypdns\.cloud//;/\.mypdns\.cloud/d;/^name$/d' >> "${input1}"
     #wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/domains.list' >> ${input1}
