@@ -9,31 +9,46 @@
 # Setup input bots and referer lists
 # **********************************
 
-input1=${TRAVIS_BUILD_DIR}/PULL_REQUESTS/domains.txt
+input1="${TRAVIS_BUILD_DIR}/PULL_REQUESTS/domains.txt"
 
 # *********************************************
 # Get Travis CI Prepared for Committing to Repo
 # *********************************************
 
-PrepareTravis () {
-    git remote rm origin
-    git remote add origin https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
-    git config --global user.email "${GIT_EMAIL}"
-    git config --global user.name "${GIT_NAME}"
-    git config --global push.default simple
-    git checkout "${GIT_BRANCH}"
-    ulimit -u
-}
-PrepareTravis
+#PrepareTravis () {
+#    git remote rm origin
+#    git remote add origin https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
+#    git config --global user.email "${GIT_EMAIL}"
+#    git config --global user.name "${GIT_NAME}"
+#    git config --global push.default simple
+#    git checkout "${GIT_BRANCH}"
+#    ulimit -u
+#}
+#PrepareTravis
+
+printf "\n\n\nImport rpz.mypdns.cloud from https://www.mypdns.org/\n\n\n"
+
+#printf "\n\n\nThe test file contains: $(wc -l < ${input1}) records\n\n\n"
+
+#mysql --batch --raw --host="$RPZ_DB_SERVER" --user="$RPZ_DB_USER" --password="$RPZ_DB_PASS" --database="$RPZ_DB" -N -q -e'SELECT `name` FROM $RPZ_DB_TABLE WHERE `domain_id`=$RPZ_DOMAIN_ID AND name NOT REGEXP "^[*]\.";' | sed 's/\.mypdns\.cloud//;/\.mypdns\.cloud/d;/^name$/d' >> ${input1}
+
+printf "\n\n\nThe test file contains: $(wc -l < ${input1}) records\n\n\n"
+
+dig axfr @axfr.ipv4.mypdns.cloud -p 5353 rpz.mypdns.cloud >> ${input1}
+
+printf "\n\n\nThe test file contains: $(wc -l < ${input1}) records\n\n\n"
 
 # **************************************************************************
 # Sort lists alphabetically and remove duplicates before cleaning Dead Hosts
 # **************************************************************************
 
 PrepareLists () {
-
-    wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/domains.list' >> ${input1}
-    wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/wildcard.list' >> ${input1}
+    mysql --batch --raw --host="$RPZ_DB_SERVER" --user="$RPZ_DB_USER" --password="$RPZ_DB_PASS" \
+        --database="$RPZ_DB" -N -q \
+        -e'SELECT `name` FROM $RPZ_DB_TABLE WHERE `domain_id`=$RPZ_DOMAIN_ID AND name NOT REGEXP "^[*]\.";' \
+        | sed 's/\.mypdns\.cloud//;/\.mypdns\.cloud/d;/^name$/d' >> "${input1}"
+    #wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/domains.list' >> ${input1}
+    #wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/wildcard.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/dg-malicious/domain.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/fademind_blocklists-facebook/domain.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/external-sources/hosts-sources/raw/master/data/phishing_army_blocklist_extended/domain.list' >> ${input1}
