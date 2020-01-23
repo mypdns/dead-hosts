@@ -34,7 +34,7 @@ printf "\n\n\nImport rpz.mypdns.cloud from https://www.mypdns.org/\n\n\n"
 
 printf "\n\n\nThe test file contains: $(wc -l < ${input1}) records\n\n\n"
 
-dig axfr @axfr.ipv4.mypdns.cloud -p 5353 rpz.mypdns.cloud >> ${input1}
+dig axfr @axfr.ipv4.mypdns.cloud -p 5353 rpz.mypdns.cloud >> "${input1}"
 
 printf "\n\n\nThe test file contains: $(wc -l < ${input1}) records\n\n\n"
 
@@ -42,12 +42,12 @@ printf "\n\n\nThe test file contains: $(wc -l < ${input1}) records\n\n\n"
 # Sort lists alphabetically and remove duplicates before cleaning Dead Hosts
 # **************************************************************************
 
-ping -c 1 ${RPZ_DB_SERVER}
+ping -c 1 "${RPZ_DB_SERVER2}"
 
 PrepareLists () {
-    mysql --batch --raw --host="${RPZ_DB_SERVER}" --user="${RPZ_DB_USER}" --password="{$RPZ_DB_PASS}" \
+    mysql --batch --raw --host="${RPZ_DB_SERVER2}" --user="${RPZ_DB_USER}" --password="{$RPZ_DB_PASS}" \
         --database="${RPZ_DB}" -N -q \
-        -e'SELECT `name` FROM $RPZ_DB_TABLE WHERE `domain_id`=$RPZ_DOMAIN_ID AND name NOT REGEXP "^[*]\.";' \
+        -e"SELECT `name` FROM $RPZ_DB_TABLE WHERE `domain_id`=$RPZ_DOMAIN_ID AND name NOT REGEXP '^[*]\.';" \
         | sed 's/\.mypdns\.cloud//;/\.mypdns\.cloud/d;/^name$/d' >> "${input1}"
     #wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/domains.list' >> ${input1}
     #wget -qO- 'https://gitlab.com/my-privacy-dns/matrix/matrix/raw/master/source/adware/wildcard.list' >> ${input1}
