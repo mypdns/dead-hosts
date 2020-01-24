@@ -4,10 +4,6 @@
 # Remove our inactive and invalid domains from PULL_REQUESTS
 # ***********************************************************
 
-printf "\n\n\n\tExecuting FinalCommit.sh\n\n\n"
-
-exit 0
-
 grep -Ev "^($|#)" ${TRAVIS_BUILD_DIR}/dev-tools/output/domains/ACTIVE/list > tempdomains.txt
 mv tempdomains.txt ${TRAVIS_BUILD_DIR}/PULL_REQUESTS/domains.txt
 
