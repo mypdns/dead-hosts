@@ -46,8 +46,6 @@ RunFunceble () {
     PyFunceble --ci -q -ex --plain --idna -db -h --http --database-type mariadb -m -p 4 \
         --cmd-before-end "bash ${TRAVIS_BUILD_DIR}/dev-tools/FinalCommit.sh" \
         --autosave-minutes 20 --ci-branch master --ci-distribution-branch master \
-        --commit-autosave-message "V1.${tag}.${TRAVIS_BUILD_NUMBER} [Auto Saved]" \
-        --commit-results-message "V1.${tag}.${TRAVIS_BUILD_NUMBER}" \
         --dns 127.0.0.1 -f ${input}
 }
 
@@ -59,4 +57,6 @@ exit ${?}
 ##
 # test without --cmd
 # --cmd "cat ${TRAVIS_BUILD_DIR}/dev-tools/output/domains/INACTIVE/list >> ${TRAVIS_BUILD_DIR}/PULL_REQUESTS/inactive.txt" \
+# --commit-autosave-message "V1.${tag}.${TRAVIS_BUILD_NUMBER} [Auto Saved]" \
+# --commit-results-message "V1.${tag}.${TRAVIS_BUILD_NUMBER}" \
 ##
