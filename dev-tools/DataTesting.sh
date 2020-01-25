@@ -5,11 +5,9 @@
 # Created by: Mitchell Krog (mitchellkrog@gmail.com)
 # Copyright: Mitchell Krog - https://github.com/mitchellkrogza
 
-ls -lh "/usr/bin/python"*
-
-Printf "\n\n\n\nWhere is python version installed: $(which python)\n\n\n\n"
-Printf "\n\n\n\nWhere is python version installed: $(which python3.8)\n\n\n\n"
-Printf "\n\n\n\nWhere is python version installed: $(which python3.8.0)\n\n\n\n"
+which python
+which python3.8
+which python3.8.0
 
 #PythonVersion () {
 #if grep --quiet -F 'Python 3.8' $(python --version)
