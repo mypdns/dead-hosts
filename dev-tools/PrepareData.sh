@@ -103,6 +103,7 @@ PrepareLists () {
 
     sort -u -f ${input1} -o ${input1}
     dos2unix ${input1}
+    printf "\n\nDone with dos2unix\n\n"
  }
 PrepareLists
 
