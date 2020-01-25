@@ -7,24 +7,28 @@
 
 ls -lh "/usr/bin/python"*
 
-PythonVersion () {
-if grep --quiet -F 'Python 3.8' $(python --version)
-then
+Printf "\n\n\n\nWhere is python version installed: $(which python)\n\n\n\n"
+Printf "\n\n\n\nWhere is python version installed: $(which python3.8)\n\n\n\n"
+Printf "\n\n\n\nWhere is python version installed: $(which python3.8.0)\n\n\n\n"
 
-	python3="/home/travis/virtualenv/python3.8.0/lib/python3.8"
-	printf "\n\nCurrent version: ${python3}\n\n"
+#PythonVersion () {
+#if grep --quiet -F 'Python 3.8' $(python --version)
+#then
 
-elif 
+#	python3="/home/travis/virtualenv/python3.8.0/lib/python3.8"
+#	printf "\n\nCurrent version: ${python3}\n\n"
 
-	grep --quiet -F 'Python 3.7' $(python --version)
+#elif 
 
-then
-	python3="python3="/home/travis/virtualenv/python3.7.0/lib/python3.7""
-	printf "\n\nCurrent version: ${python3}\n\n"
+#	grep --quiet -F 'Python 3.7' $(python --version)
 
-fi
-}
-PythonVersion
+#then
+#	python3="python3="/home/travis/virtualenv/python3.7.0/lib/python3.7""
+#	printf "\n\nCurrent version: ${python3}\n\n"
+
+#fi
+#}
+#PythonVersion
 
 # ****************************************************************
 # This uses the awesome PyFunceble script created by Nissar Chababy
