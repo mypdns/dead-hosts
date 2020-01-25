@@ -29,8 +29,35 @@ pyfuncebleProductionConfigurationFileLocation=${TRAVIS_BUILD_DIR}/dev-tools/.PyF
 # Find PyFunceble at: https://github.com/funilrys/PyFunceble
 # **********************************************************
 
+PythonVersion () {
+if grep --quiet 'python3.8' $(find /usr/bin/python3*)
+then
+
+	python3=$(which python3.8)
+
+elif 
+
+	grep --quiet 'python3.7'
+
+then
+	python3=$(which python3.7)
+
+elif
+
+	grep --quiet 'python3.6'
+
+then
+
+	printf "\nPyFunceble requires python >=3.7"
+	exit 99
+
+fi
+}
+PythonVersion
+
 RunFunceble () {
 
+    PyFunceble=$(which PyFunceble)
     tag=$(date '+%F %X %Z %z')
     ulimit -u
     cd ${TRAVIS_BUILD_DIR}/dev-tools
@@ -43,7 +70,7 @@ RunFunceble () {
         rm "${pyfuncebleProductionConfigurationFileLocation}"
     fi
 
-    PyFunceble --ci -q -ex --plain --idna -db -h --http --database-type mariadb -m -p 4 \
+    "${python3}" "$PyFunceble" --ci -q -ex --plain --idna -db -h --http --database-type mariadb -m -p 4 \
         --cmd-before-end "bash ${TRAVIS_BUILD_DIR}/dev-tools/FinalCommit.sh" \
         --autosave-minutes 20 --ci-branch master --ci-distribution-branch master \
         --dns 127.0.0.1 -f ${input}
