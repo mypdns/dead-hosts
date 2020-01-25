@@ -8,29 +8,19 @@
 ls -lh "/usr/bin/python"*
 
 PythonVersion () {
-if grep --quiet 'python3.8' $(find /usr/bin/python3*)
+if grep --quiet -F 'Python 3.8' $(python --version)
 then
 
-	python3=$(which python3.8)
+	python3="/home/travis/virtualenv/python3.8.0/lib/python3.8"
 	printf "\n\nCurrent version: ${python3}\n\n"
 
 elif 
 
-	grep --quiet 'python3.7'
+	grep --quiet -F 'Python 3.7' $(python --version)
 
 then
-	python3=$(which python3.7)
+	python3="python3="/home/travis/virtualenv/python3.7.0/lib/python3.7""
 	printf "\n\nCurrent version: ${python3}\n\n"
-
-elif
-
-	grep --quiet 'python3.6'
-
-then
-
-	printf "\n\nCurrent version: ${python3}\n\n"
-	printf "\nPyFunceble requires python >=3.7"
-	exit 99
 
 fi
 }
