@@ -5,9 +5,9 @@
 # Created by: Mitchell Krog (mitchellkrog@gmail.com)
 # Copyright: Mitchell Krog - https://github.com/mitchellkrogza
 
-which python
-which python3.8
-which python3.8.0
+#which python
+#which python3.8
+#which python3.8.0
 
 #PythonVersion () {
 #if grep --quiet -F 'Python 3.8' $(python --version)
@@ -66,7 +66,7 @@ RunFunceble () {
         rm "${pyfuncebleProductionConfigurationFileLocation}"
     fi
 
-    "${python3}" PyFunceble --ci -q -ex --plain --idna -db -h --http --database-type mariadb -m -p 4 \
+    $(which python) PyFunceble --ci -q -ex --plain --idna -db -h --http --database-type mariadb -m -p 4 \
         --cmd-before-end "bash ${TRAVIS_BUILD_DIR}/dev-tools/FinalCommit.sh" \
         --autosave-minutes 20 --ci-branch master --ci-distribution-branch master \
         --dns 127.0.0.1 -f ${input}
