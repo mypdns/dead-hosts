@@ -23,17 +23,12 @@ input=${TRAVIS_BUILD_DIR}/PULL_REQUESTS/domains.txt
 pyfuncebleConfigurationFileLocation=${TRAVIS_BUILD_DIR}/dev-tools/.PyFunceble.yaml
 pyfuncebleProductionConfigurationFileLocation=${TRAVIS_BUILD_DIR}/dev-tools/.PyFunceble_production.yaml
 
-# **********************
-# Run PyFunceble Testing
-# **********************************************************
-# Find PyFunceble at: https://github.com/funilrys/PyFunceble
-# **********************************************************
-
 PythonVersion () {
 if grep --quiet 'python3.8' $(find /usr/bin/python3*)
 then
 
 	python3=$(which python3.8)
+	printf "\n\nCurrent version: ${python3}\n\n"
 
 elif 
 
@@ -41,6 +36,7 @@ elif
 
 then
 	python3=$(which python3.7)
+	printf "\n\nCurrent version: ${python3}\n\n"
 
 elif
 
@@ -48,12 +44,19 @@ elif
 
 then
 
+	printf "\n\nCurrent version: ${python3}\n\n"
 	printf "\nPyFunceble requires python >=3.7"
 	exit 99
 
 fi
 }
 PythonVersion
+
+# **********************
+# Run PyFunceble Testing
+# **********************************************************
+# Find PyFunceble at: https://github.com/funilrys/PyFunceble
+# **********************************************************
 
 RunFunceble () {
 
