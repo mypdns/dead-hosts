@@ -11,6 +11,13 @@
 *.sh text eol=lf working-tree-encoding=UTF-8
 *.yml text eol=lf working-tree-encoding=UTF-8
 *.yaml text eol=lf working-tree-encoding=UTF-8
+*.gitkeep text eol=lf working-tree-encoding=UTF-8
+*.csv text eol=lf working-tree-encoding=UTF-8
+*.json text eol=lf working-tree-encoding=UTF-8
+INVALID text eol=lf working-tree-encoding=UTF-8
+INACTIVE text eol=lf working-tree-encoding=UTF-8
+ACTIVE text eol=lf working-tree-encoding=UTF-8
+
 
 # Should ensure submitted domain.list are encode with LF (\n) on gitlab
 /**/domain.list text eol=lf working-tree-encoding=UTF-8

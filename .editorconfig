@@ -23,3 +23,16 @@ trim_trailing_whitespace = false
 insert_final_newline = true
 indent_size = 2
 end_of_line = LF
+
+[*.json]
+indent_style = space
+trim_trailing_whitespace = true
+end_of_line = LF
+
+[*.csv]
+trim_trailing_whitespace = true
+end_of_line = LF
+
+[*.gitkeep]
+trim_trailing_whitespace = true
+end_of_line = LF

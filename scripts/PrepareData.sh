@@ -12,9 +12,9 @@ GIT_DIR="$(git rev-parse --show-toplevel)"
 
 input1="${GIT_DIR}/PULL_REQUESTS/domains.txt"
 
-printf "\n\n\nImport rpz.mypdns.cloud from https://www.mypdns.org/\n"
+printf "\nImport rpz.mypdns.cloud from https://www.mypdns.org/\n"
 
-printf "\n\n\nThe test file contains: $(wc -l < ${input1}) records\n"
+printf "\nThe test file contains: $(wc -l < ${input1}) records\n"
 
 #printf "\n\n\nImport sql\n"
 
@@ -131,6 +131,8 @@ WhiteListing () {
 }
 
 WhiteListing
+
+printf "\nThe test file contains: $(wc -l < ${input1}) records\n"
 
 exit ${?}
 
