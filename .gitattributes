@@ -17,7 +17,9 @@
 INVALID text eol=lf working-tree-encoding=UTF-8
 INACTIVE text eol=lf working-tree-encoding=UTF-8
 ACTIVE text eol=lf working-tree-encoding=UTF-8
-
+list text eol=lf working-tree-encoding=UTF-8
+.run_id eol=lf working-tree-encoding=UTF-8
+*.* eol=lf working-tree-encoding=UTF-8
 
 # Should ensure submitted domain.list are encode with LF (\n) on gitlab
 /**/domain.list text eol=lf working-tree-encoding=UTF-8
