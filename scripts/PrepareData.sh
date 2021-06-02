@@ -8,6 +8,7 @@
 # **********************************
 # Setup input bots and referrer lists
 # **********************************
+GIT_DIR="$(git rev-parse --show-toplevel)"
 
 input1="${GIT_DIR}/PULL_REQUESTS/domains.txt"
 
