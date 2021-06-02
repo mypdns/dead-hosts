@@ -114,7 +114,7 @@ PrepareLists () {
 
     sort -u -f ${input1} -o ${input1}
     # dos2unix ${input1}
-    printf "\n\nDone with dos2unix\n\n"
+    printf "\n\nDone importing external sources\n\n"
  }
 PrepareLists
 
