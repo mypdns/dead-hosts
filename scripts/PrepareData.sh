@@ -113,7 +113,7 @@ PrepareLists () {
     wget -qO- 'https://raw.githubusercontent.com/Import-External-Sources/hosts-sources/master/data/someonewhocares/domain.list' >> ${input1}
 
     sort -u -f ${input1} -o ${input1}
-    dos2unix ${input1}
+    # dos2unix ${input1}
     printf "\n\nDone with dos2unix\n\n"
  }
 PrepareLists
