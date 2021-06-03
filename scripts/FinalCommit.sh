@@ -7,7 +7,7 @@
 grep -Ev "^($|#)" ${GIT_DIR}/output/domains.txt/domains/ACTIVE/list > tempdomains.txt
 mv tempdomains.txt ${GIT_DIR}/PULL_REQUESTS/domains.txt
 
-dead="${GIT_DIR}/scripts/output/domains/INACTIVE/list"
+dead="${GIT_DIR}/output/domains.txt/domains/INACTIVE/list"
 inactive="${GIT_DIR}/PULL_REQUESTS/inactive.txt"
 
 if [ -f "$dead" ]

@@ -12,6 +12,8 @@ GIT_DIR="$(git rev-parse --show-toplevel)"
 
 input1="${GIT_DIR}/PULL_REQUESTS/domains.txt"
 
+INACTIVE_LIST="${GIT_DIR}/PULL_REQUESTS/inactive.txt"
+
 printf "\nImport rpz.mypdns.cloud from https://www.mypdns.org/\n"
 
 printf "\nThe test file contains: $(wc -l < ${input1}) records\n"
@@ -112,7 +114,8 @@ PrepareLists () {
     wget -qO- 'https://raw.githubusercontent.com/Import-External-Sources/hosts-sources/master/data/suspiciousdomains_medium/domain.list' >> ${input1}
     wget -qO- 'https://raw.githubusercontent.com/Import-External-Sources/hosts-sources/master/data/someonewhocares/domain.list' >> ${input1}
 
-    sort -u -f ${input1} -o ${input1}
+    # Let UHBW do the sort from now on
+    # sort -u -f ${input1} -o ${input1}
     # dos2unix ${input1}
     printf "\n\nDone importing external sources\n\n"
  }
@@ -122,14 +125,25 @@ PrepareLists
 # Deletion of all whitelisted domains
 # ***********************************
 
-WhiteListing () {
-    if [[ "$(git log -1 | tail -1 | xargs)" =~ "ci skip" ]]
-        then
-            hash 'uhb_whit.list' >> "${input1}"
-            uhb_whitelist -f "${input1}" -o "${input1}"
-    fi
-}
+# WhiteListing () {
+#     if [[ "$(git log -1 | tail -1 | xargs)" =~ "ci skip" ]]
+#         then
+#             hash 'uhb_whit.list' >> "${input1}"
+#             uhb_whitelist -f "${input1}" -o "${input1}" \
+#                 -w INACTIVE_LIST -wc \
+#                 --all \
+#                 --standard-sorting
+#     fi
+# }
 
+
+WhiteListing () {
+    hash 'uhb_whitelist' >> "${input1}"
+    uhb_whitelist -f "${input1}" -o "${input1}" \
+        -w INACTIVE_LIST -wc \
+        --all https://raw.githubusercontent.com/mypdns/matrix/master/source/adware/wildcard.list \
+        --standard-sorting
+}
 WhiteListing
 
 printf "\nThe test file contains: $(wc -l < ${input1}) records\n"
