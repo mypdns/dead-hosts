@@ -115,7 +115,7 @@ PrepareLists () {
     wget -qO- 'https://raw.githubusercontent.com/Import-External-Sources/hosts-sources/master/data/someonewhocares/domain.list' >> ${input1}
 
     # Let UHBW do the sort from now on
-    # sort -u -f ${input1} -o ${input1}
+    sort -u -f ${input1} -o ${input1}
     # dos2unix ${input1}
     printf "\n\nDone importing external sources\n\n"
  }
@@ -125,26 +125,16 @@ PrepareLists
 # Deletion of all whitelisted domains
 # ***********************************
 
-# WhiteListing () {
-#     if [[ "$(git log -1 | tail -1 | xargs)" =~ "ci skip" ]]
-#         then
-#             hash 'uhb_whit.list' >> "${input1}"
-#             uhb_whitelist -f "${input1}" -o "${input1}" \
-#                 -w "${INACTIVE_LIST}" -wc \
-#                 --all https://raw.githubusercontent.com/mypdns/matrix/master/source/adware/wildcard.list \
-#                 --standard-sorting
-#     fi
-# }
-
-
 WhiteListing () {
-    hash 'uhb_whitelist' >> "${input1}"
-    uhb_whitelist --standard-sorting \
-        -f "${input1}" -o "${input1}" \
-        -w "${INACTIVE_LIST}" -wc \
-        --all https://raw.githubusercontent.com/mypdns/matrix/master/source/adware/wildcard.list \
-        --standard-sorting
+    if [[ "$(git log -1 | tail -1 | xargs)" =~ "ci skip" ]]
+    then
+        hash uhb_whitelist >> "${input1}"
+        uhb_whitelist -f "${input1}" -o "${input1}" \
+            -w "${INACTIVE_LIST}" -wc \
+            --standard-sorting
+    fi
 }
+
 WhiteListing
 
 printf "\nThe test file contains: $(wc -l < ${input1}) records\n"

@@ -19,9 +19,9 @@ then
  sort -u -f "${inactive}" -o "${inactive}"
 fi
 
-if [ -f '${GIT_DIR}/PULL_REQUESTS/domains.txt']
+if [ -f "${GIT_DIR}/PULL_REQUESTS/domains.txt" ]
 then
-    sort -u -f '${GIT_DIR}/PULL_REQUESTS/domains.txt' -o '${GIT_DIR}/PULL_REQUESTS/domains.txt'
+    sort -u -f "${GIT_DIR}/PULL_REQUESTS/domains.txt" -o "${GIT_DIR}/PULL_REQUESTS/domains.txt"
 fi
 
 exit ${?}
