@@ -11,8 +11,8 @@ on:
     - cron: '58 * * * *'
 
 env:
-  GIT_NAME: '${{ secrets.GIT_BOT_NAME }}'
-  GIT_EMAIL: '${{ secrets.GIT_BOT_EMAIL }}'
+  GIT_NAME: '${{ secrets.GIT_NAME }}'
+  GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
   GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
   BUILD_NUMBER: '${{ github.run_number }}'
   PYFUNCEBLE_AUTO_CONFIGURATION: 'YES'
