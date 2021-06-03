@@ -43,6 +43,7 @@ RunFunceble () {
         --ci-max-minutes 55 \
         --ci-branch data-testing \
         --ci-distribution-branch master \
+        --ci-command "sort -u -f ${input} -o ${input}" \
         -f ${input}
 }
 
