@@ -115,8 +115,8 @@ PrepareLists () {
     wget -qO- 'https://raw.githubusercontent.com/Import-External-Sources/hosts-sources/master/data/someonewhocares/domain.list' >> ${input1}
 
     # Let UHBW do the sort from now on
-    sort -u -f ${input1} -o ${input1}
-    # dos2unix ${input1}
+    sort -u -f "${input1}" -o "${input1}"
+    # dos2unix "${input1}"
     printf "\n\nDone importing external sources\n\n"
  }
 PrepareLists

@@ -21,10 +21,10 @@ tag=$(date '+%F %X %Z %z')
 # ******************
 GIT_DIR="$(git rev-parse --show-toplevel)"
 
-# input="${GIT_DIR}/PULL_REQUESTS/domains.txt"
+input="${GIT_DIR}/PULL_REQUESTS/domains.txt"
 
 # Global @PyFunceble test file
-input="https://raw.githubusercontent.com/PyFunceble/ci_test/master/test.list"
+# input="https://raw.githubusercontent.com/PyFunceble/ci_test/master/test.list"
 
 # **********************
 # Run PyFunceble Testing
