@@ -140,7 +140,7 @@ PrepareLists
 WhiteListing () {
     hash 'uhb_whitelist' >> "${input1}"
     uhb_whitelist -f "${input1}" -o "${input1}" \
-        -w INACTIVE_LIST -wc \
+        -w "${INACTIVE_LIST}" -wc \
         --all https://raw.githubusercontent.com/mypdns/matrix/master/source/adware/wildcard.list \
         --standard-sorting
 }
