@@ -40,7 +40,7 @@ RunFunceble () {
 
     pyfunceble --ci -q -ex \
         --ci-end-command "bash ${GIT_DIR}/scripts/FinalCommit.sh" \
-        --ci-max-minutes 55 \
+        --ci-max-minutes 50 \
         --ci-branch master \
         --ci-distribution-branch master \
         --ci-command "sort -u -f ${input} -o ${input}" \
