@@ -114,37 +114,37 @@ PrepareLists () {
     wget -qO- 'https://raw.githubusercontent.com/Import-External-Sources/hosts-sources/master/data/suspiciousdomains_medium/domain.list' >> ${input1}
     wget -qO- 'https://raw.githubusercontent.com/Import-External-Sources/hosts-sources/master/data/someonewhocares/domain.list' >> ${input1}
     wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/adware/inactive_wildcard.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/bait_sites/domains.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/bait_sites/wildcard.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/coin-blocker/domains.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/coin-blocker/wildcard.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/dns-servers/empty_dns.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/fake-news/domains.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/fake-news/wildcard.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/gambling/domains.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/gambling/wildcard.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/ip-network-blocking/ip4.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/ip-network-blocking/ip6.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/malicious/domains.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/malicious/wildcard.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/phishing/domains.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/phishing/wildcard.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/porno-sites/domains.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/porno-sites/wildcard.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/redirector/domains.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/redirector/wildcard.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/scamming/domains.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/scamming/inactive.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/scamming/wildcard.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/sharked-domains/domains.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/sharked-domains/wildcard.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/spyware/domains.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/spyware/wildcard.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/tracking/domains.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/tracking/wildcard.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/typosquatting/wildcard.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/whitelist/domains.list' >> ${input1}
-wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/whitelist/wildcard.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/bait_sites/domains.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/bait_sites/wildcard.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/coin-blocker/domains.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/coin-blocker/wildcard.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/dns-servers/empty_dns.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/fake-news/domains.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/fake-news/wildcard.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/gambling/domains.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/gambling/wildcard.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/ip-network-blocking/ip4.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/ip-network-blocking/ip6.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/malicious/domains.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/malicious/wildcard.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/phishing/domains.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/phishing/wildcard.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/porno-sites/domains.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/porno-sites/wildcard.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/redirector/domains.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/redirector/wildcard.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/scamming/domains.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/scamming/inactive.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/scamming/wildcard.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/sharked-domains/domains.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/sharked-domains/wildcard.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/spyware/domains.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/spyware/wildcard.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/tracking/domains.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/tracking/wildcard.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/typosquatting/wildcard.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/whitelist/domains.list' >> ${input1}
+    wget -qO- 'https://raw.githubusercontent.com/mypdns/matrix/master/source/whitelist/wildcard.list' >> ${input1}
 
     # Let UHBW do the sort from now on
     sort -u -f "${input1}" -o "${input1}"
