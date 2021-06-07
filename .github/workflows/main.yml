@@ -103,7 +103,7 @@ jobs:
       - name: Preparer test data
         run: bash "${{ github.workspace }}/scripts/PrepareData.sh"
 
-      - name: Availability test of porn records
+      - name: Availability test of dead records
         run: |
-          echo "${{ github.run_number }}" > "${{ github.workspace }}/.run_id"
+          # echo "${{ github.run_number }}" > "${{ github.workspace }}/.run_id"
           bash "${{ github.workspace }}/scripts/DataTesting.sh"
