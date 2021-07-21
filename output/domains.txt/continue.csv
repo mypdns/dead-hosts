@@ -27873,3 +27873,6 @@ idna_subject,checker_type,destination,source,tested_at,session_id
 121.albin19.filter.clickbank.net,AVAILABILITY,domains.txt,../PULL_REQUESTS/domains.txt,2021-07-21 04:03:27.034632,acfbf64650cefd134d1f5fb2
 123.boxes26.filter.clickbank.net,AVAILABILITY,domains.txt,../PULL_REQUESTS/domains.txt,2021-07-21 04:04:26.099159,acfbf64650cefd134d1f5fb2
 126.eatstopeat.filter.clickbank.net,AVAILABILITY,domains.txt,../PULL_REQUESTS/domains.txt,2021-07-21 05:06:24.471689,acfbf64650cefd134d1f5fb2
+129.bballplans.filter.clickbank.net,AVAILABILITY,domains.txt,../PULL_REQUESTS/domains.txt,2021-07-21 09:07:50.074306,acfbf64650cefd134d1f5fb2
+13.1000pb.filter.clickbank.net,AVAILABILITY,domains.txt,../PULL_REQUESTS/domains.txt,2021-07-21 09:08:58.160027,acfbf64650cefd134d1f5fb2
+133.albin19.filter.clickbank.net,AVAILABILITY,domains.txt,../PULL_REQUESTS/domains.txt,2021-07-21 09:09:58.715305,acfbf64650cefd134d1f5fb2
